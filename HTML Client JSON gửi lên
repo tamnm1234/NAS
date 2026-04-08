@@ -1,0 +1,39 @@
+Cách sử dụng từ HTML Client (Ví dụ JSON gửi lên)
+
+Để sử dụng tính năng forward mới, bạn gửi gói tin theo cấu trúc sau:
+
+1. Gửi cho tất cả mọi người (Broadcast All):
+JSON
+
+{
+  "action": "forward",
+  "mode": "all",
+  "data": "Chào tất cả mọi người!",
+  "token": "VNAHCM_IoT_2024_@Secure"
+}
+
+2. Gửi riêng cho một người (Private - ví dụ gửi cho Admin):
+JSON
+
+{
+  "action": "forward",
+  "mode": "private",
+  "target_name": "Admin_Dashboard",
+  "data": "Cảnh báo: Có biến!",
+  "token": "VNAHCM_IoT_2024_@Secure"
+}
+
+3. Gửi cho một nhóm (Group Forward - ví dụ gửi cho nhóm 'web'):
+JSON
+
+{
+  "action": "forward",
+  "mode": "group",
+  "target_group": "web",
+  "data": "Dữ liệu cảm biến mới cập nhật",
+  "token": "VNAHCM_IoT_2024_@Secure"
+}
+
+Lưu ý cho giao diện HTML:
+
+Trong phần ws.onmessage, bạn hãy thêm xử lý cho res: "forwarded_msg" để hiển thị nội dung chat hoặc dữ liệu được chuyển tiếp nhé. Hệ thống của bạn giờ đây đã có đầy đủ lõi cho một ứng dụng Chat + Điều khiển công nghiệp rồi!
