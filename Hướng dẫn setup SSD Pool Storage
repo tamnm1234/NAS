@@ -1,0 +1,52 @@
+1. root@SY1:~# rm syno_hdd_db.sh
+
+2. root@SY1:~# curl -L https://raw.githubusercontent.com/007revad/Synology_HDD_db/main/syno_hdd_db.sh -o syno_hdd_db.sh
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+    100 99471  100 99471    0     0  18059      0  0:00:05  0:00:05 --:--:-- 10907
+root@SY1:~# ls -lh syno_hdd_db.sh
+    -rw------- 1 root root 98K Apr 23 11:13 syno_hdd_db.sh
+3. root@SY1:~# bash syno_hdd_db.sh -r
+    Synology_HDD_db v3.6.125
+    DS1821+ x86_64 DSM 7.3.2-86009-3
+    - StorageManager 1.0.1-1100
+    - SynoOnlinePack_v2 version 1050
+    - ds1821+_host_v7 version 8069
+    
+    Using options: -r
+    Running from: /root/syno_hdd_db.sh
+    Running in interactive shell
+    
+    HDD/SSD models found: 2
+    HDS5C4040ALE630,MPAOA580,4000 GB
+    WD30EZRX-00D8PB0,80.00A80,3000 GB
+    
+    M.2 drive models found: 1
+    Kingmax PCIe SSD 256GB,V0808A0,256 GB
+    
+    No M.2 PCIe cards found
+    
+    No Expansion Units found
+    
+    Added HDS5C4040ALE630 (MPAOA580) to ds1821+_host_v7.db
+    Edited unverified drives in ds1821+_host_v7.db
+    Added WD30EZRX-00D8PB0 (80.00A80) to ds1821+_host_v7.db
+    Added Kingmax PCIe SSD 256GB (V0808A0) to ds1821+_host_v7.db
+    
+    Backed up synoinfo.conf
+    
+    Support disk compatibility already enabled.
+    
+    Disabled support memory compatibility.
+    
+    Max memory already set to 32 GB.
+    
+    NVMe support already enabled.
+    
+    M.2 volume support already enabled.
+    
+    Drive db auto updates already enabled.
+    
+    DSM successfully checked disk compatibility.
+
+You may need to reboot the Synology to see the changes.
